@@ -9,6 +9,7 @@ class Shape
 	public:
     Shape();
     Shape(std::string const& name);
+    virtual ~Shape();
 		virtual double area() const = 0;
 		virtual double volume() const = 0;
    std::string const& name() const;
