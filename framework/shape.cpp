@@ -8,6 +8,11 @@ Shape::Shape(std::string const& name):
 name_{"name"},
 color_{0, 0, 0} {}
 
+Shape::~Shape()
+{
+  std::cout << "Shape gelöscht" << std::endl; 
+}
+
 std::string const& Shape::name() const
 {
   return name_;
