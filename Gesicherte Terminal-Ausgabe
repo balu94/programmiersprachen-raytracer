@@ -1,0 +1,105 @@
+Last login: Sun Jun 21 16:37:33 on console
+Vanessas-MBP:~ Vanessa$ cd ./Documents/Simon/C++/raytracer
+Vanessas-MBP:raytracer Vanessa$ make 
+make: *** No targets specified and no makefile found.  Stop.
+Vanessas-MBP:raytracer Vanessa$ cd ./build/
+Vanessas-MBP:build Vanessa$ cmake ..
+-- The C compiler identification is AppleClang 6.0.0.6000057
+-- The CXX compiler identification is AppleClang 6.0.0.6000057
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenGL: /System/Library/Frameworks/OpenGL.framework  
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - found
+-- Found Threads: TRUE  
+-- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
+-- Using Cocoa for window creation
+-- Using NSGL for context creation
+-- Building GLFW only for the native architecture
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/Vanessa/Documents/Simon/C++/raytracer/build
+Vanessas-MBP:build Vanessa$ make
+Scanning dependencies of target glfw
+[  3%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/clipboard.c.o
+[  7%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/context.c.o
+[ 11%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/gamma.c.o
+[ 14%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/init.c.o
+[ 18%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/input.c.o
+[ 22%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/joystick.c.o
+[ 25%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/monitor.c.o
+[ 29%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/time.c.o
+[ 33%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/window.c.o
+[ 37%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/cocoa_clipboard.m.o
+[ 40%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/cocoa_gamma.c.o
+[ 44%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/cocoa_init.m.o
+[ 48%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o
+[ 51%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o
+/Users/Vanessa/Documents/Simon/C++/raytracer/external/glfw-3.0.3/src/cocoa_monitor.m:45:42: warning: 
+      'CGDisplayIOServicePort' is deprecated: first deprecated in OS X 10.9
+      [-Wdeprecated-declarations]
+    info = IODisplayCreateInfoDictionary(CGDisplayIOServicePort(displayID),
+                                         ^
+/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDisplayConfiguration.h:355:24: note: 
+      'CGDisplayIOServicePort' has been explicitly marked deprecated here
+CG_EXTERN io_service_t CGDisplayIOServicePort(CGDirectDisplayID display)
+                       ^
+1 warning generated.
+[ 55%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/cocoa_time.c.o
+[ 59%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/cocoa_window.m.o
+/Users/Vanessa/Documents/Simon/C++/raytracer/external/glfw-3.0.3/src/cocoa_window.m:807:5: warning: 
+      'SetFrontProcess' is deprecated: first deprecated in OS X 10.9
+      [-Wdeprecated-declarations]
+    SetFrontProcess(&psn);
+    ^
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/Processes.h:603:1: note: 
+      'SetFrontProcess' has been explicitly marked deprecated here
+SetFrontProcess(const ProcessSerialNumber * PSN)              AVAILABLE_...
+^
+1 warning generated.
+[ 62%] Building C object external/glfw-3.0.3/src/CMakeFiles/glfw.dir/nsgl_context.m.o
+Linking C static library libglfw3.a
+[ 62%] Built target glfw
+Scanning dependencies of target framework
+[ 66%] Building C object framework/CMakeFiles/framework.dir/glew.c.o
+[ 70%] Building CXX object framework/CMakeFiles/framework.dir/box.cpp.o
+[ 74%] Building CXX object framework/CMakeFiles/framework.dir/pixel.cpp.o
+[ 77%] Building CXX object framework/CMakeFiles/framework.dir/ppmwriter.cpp.o
+[ 81%] Building CXX object framework/CMakeFiles/framework.dir/renderer.cpp.o
+[ 85%] Building CXX object framework/CMakeFiles/framework.dir/sphere.cpp.o
+[ 88%] Building CXX object framework/CMakeFiles/framework.dir/window.cpp.o
+Linking CXX static library libframework.a
+[ 88%] Built target framework
+Scanning dependencies of target example
+[ 92%] Building CXX object source/CMakeFiles/example.dir/example.cpp.o
+Linking CXX executable ../build/Release/example
+[ 92%] Built target example
+Scanning dependencies of target raytracer
+[ 96%] Building CXX object source/CMakeFiles/raytracer.dir/raytracer.cpp.o
+Linking CXX executable ../build/Release/raytracer
+[ 96%] Built target raytracer
+Scanning dependencies of target tests
+[100%] Building CXX object tests/CMakeFiles/tests.dir/main.cpp.o
+Linking CXX executable ../build/Release/tests
+Running tests
+Test project /Users/Vanessa/Documents/Simon/C++/raytracer/build
+    Start 1: tests
+1/1 Test #1: tests ............................   Passed    0.02 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.02 sec
+[100%] Built target tests
+Vanessas-MBP:build Vanessa$ 
